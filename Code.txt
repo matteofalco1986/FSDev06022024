@@ -1,0 +1,134 @@
+// EX 1
+
+SELECT [ProductID]
+      ,[ProductName]
+      ,[SupplierID]
+      ,[CategoryID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[ReorderLevel]
+      ,[Discontinued]
+  FROM [dbo].[Products]
+
+// EX 2
+
+SELECT [ProductID]
+      ,[ProductName]
+      ,[SupplierID]
+      ,[CategoryID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[ReorderLevel]
+      ,[Discontinued]
+  FROM [dbo].[Products]
+  where UnitsInStock > 40
+
+// EX 3
+
+SELECT [EmployeeID]
+      ,[LastName]
+      ,[FirstName]
+      ,[Title]
+      ,[TitleOfCourtesy]
+      ,[BirthDate]
+      ,[HireDate]
+      ,[Address]
+      ,[City]
+      ,[Region]
+      ,[PostalCode]
+      ,[Country]
+      ,[HomePhone]
+      ,[Extension]
+      ,[Photo]
+      ,[Notes]
+      ,[ReportsTo]
+      ,[PhotoPath]
+  FROM [dbo].[Employees]
+  where City = 'London'
+
+// EX 4
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  order by Freight desc
+
+// EX 5
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  where Freight between 90 and 200
+
+// EX 6
+
+SELECT [ProductID]
+      ,[ProductName]
+      ,[SupplierID]
+      ,[CategoryID]
+      ,[QuantityPerUnit]
+      ,[UnitPrice]
+      ,[UnitsInStock]
+      ,[UnitsOnOrder]
+      ,[ReorderLevel]
+      ,[Discontinued]
+  FROM [dbo].[Products]
+  where CategoryID = 1
+
+// EX 7
+
+SELECT [OrderID]
+      ,[ProductID]
+      ,[UnitPrice]
+      ,[Quantity]
+      ,[Discount]
+  FROM [dbo].[Order Details]
+  where Discount > 0
+
+// EX 8
+
+SELECT [OrderID]
+      ,[CustomerID]
+      ,[EmployeeID]
+      ,[OrderDate]
+      ,[RequiredDate]
+      ,[ShippedDate]
+      ,[ShipVia]
+      ,[Freight]
+      ,[ShipName]
+      ,[ShipAddress]
+      ,[ShipCity]
+      ,[ShipRegion]
+      ,[ShipPostalCode]
+      ,[ShipCountry]
+  FROM [dbo].[Orders]
+  where CustomerID = 'BOTTM' and Freight > 50
+
